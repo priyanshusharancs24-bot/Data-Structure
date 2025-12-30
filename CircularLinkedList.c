@@ -6,9 +6,6 @@ struct Node {
     struct Node* next;
 };
 
-/* ======================================
-          TRAVERSAL (PRINT LIST)
-====================================== */
 void traverse(struct Node* head) {
     if(head == NULL) {
         printf("List is empty\n");
@@ -24,9 +21,6 @@ void traverse(struct Node* head) {
     printf("(HEAD)\n");
 }
 
-/* ======================================
-      INSERTION AT BEGINNING
-====================================== */
 struct Node* insertAtBeginning(struct Node* head, int data) {
     struct Node* new = (struct Node*)malloc(sizeof(struct Node));
     new->data = data;
@@ -48,9 +42,6 @@ struct Node* insertAtBeginning(struct Node* head, int data) {
     return new;        // new becomes head
 }
 
-/* ======================================
-        INSERTION AT END
-====================================== */
 struct Node* insertAtEnd(struct Node* head, int data) {
     struct Node* new = (struct Node*)malloc(sizeof(struct Node));
     new->data = data;
@@ -72,9 +63,6 @@ struct Node* insertAtEnd(struct Node* head, int data) {
     return head;
 }
 
-/* ======================================
-        DELETION AT BEGINNING
-====================================== */
 struct Node* deleteAtBeginning(struct Node* head) {
     if(head == NULL) return NULL;
 
@@ -97,9 +85,6 @@ struct Node* deleteAtBeginning(struct Node* head) {
     return head;
 }
 
-/* ======================================
-        DELETION AT END
-====================================== */
 struct Node* deleteAtEnd(struct Node* head) {
     if(head == NULL) return NULL;
 
@@ -123,9 +108,6 @@ struct Node* deleteAtEnd(struct Node* head) {
     return head;
 }
 
-/* ======================================
-            SEARCHING
-====================================== */
 int search(struct Node* head, int key) {
     if(head == NULL) return -1;
 
@@ -144,9 +126,6 @@ int search(struct Node* head, int key) {
     return -1;  // not found
 }
 
-/* ======================================
-                 MAIN
-====================================== */
 
 int main() {
     struct Node* head = NULL;
