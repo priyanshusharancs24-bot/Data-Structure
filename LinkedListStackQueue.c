@@ -1,20 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Node structure */
 struct node {
     int data;
     struct node *next;
 };
 
-/* Stack pointers */
 struct node *top = NULL;
 
-/* Queue pointers */
 struct node *front = NULL;
 struct node *rear = NULL;
 
-/* Stack push */
 void push(int x) {
     struct node *temp = (struct node *)malloc(sizeof(struct node));
     temp->data = x;
@@ -22,7 +18,6 @@ void push(int x) {
     top = temp;
 }
 
-/* Stack pop */
 void pop() {
     if (top == NULL) {
         printf("Stack Underflow\n");
@@ -35,7 +30,6 @@ void pop() {
     free(temp);
 }
 
-/* Display stack */
 void displayStack() {
     struct node *p = top;
     printf("Stack: ");
@@ -47,7 +41,6 @@ void displayStack() {
     printf("\n");
 }
 
-/* Queue enqueue */
 void enqueue(int x) {
     struct node *temp = (struct node *)malloc(sizeof(struct node));
     temp->data = x;
@@ -62,7 +55,6 @@ void enqueue(int x) {
     rear = temp;
 }
 
-/* Queue dequeue */
 void dequeue() {
     if (front == NULL) {
         printf("Queue Underflow\n");
@@ -79,7 +71,6 @@ void dequeue() {
     free(temp);
 }
 
-/* Display queue */
 void displayQueue() {
     struct node *p = front;
     printf("Queue: ");
@@ -91,7 +82,6 @@ void displayQueue() {
     printf("\n");
 }
 
-/* Main function */
 int main() {
     int choice, value;
 
