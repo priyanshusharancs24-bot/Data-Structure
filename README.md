@@ -1,4 +1,4 @@
-# Data-Structure
+# 📚Data-Structure
 This repository contains the lab programs for the Data Structures (DST) course.
 
 # 🧑‍🎓 Student Details
